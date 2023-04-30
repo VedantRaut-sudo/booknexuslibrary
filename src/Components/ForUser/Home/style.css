@@ -1,0 +1,288 @@
+.hero_section_wrap {
+    /* background: url('../../../Assets/books-g813188cd4_1920.jpg'); */
+    height: 500px;
+    /* /padding: 130px;  */
+    max-width: 1220px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.bookreadimg {
+    width: 450px;
+}
+
+.searchBar {
+    padding: 11px 20px;
+    width: 400px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 13px;
+    margin: 10px 0;
+    /* background-color: red; */
+    /* border-bottom: 2px solid black; */
+    border: 2px solid hsl(219, 100%, 66%);
+    background-color: rgb(224, 224, 224);
+}
+
+
+.searchBar:focus {
+    /* border-color: #cdaa73; */
+    border-width: 2px;
+    border-color: rgb(90, 34, 230);
+    border-color: #384bfd;
+    /* brighter golden color */
+    outline: none;
+    /* remove the default blue outline */
+    /* border-image:  linear-gradient(#f6b73c, #4d9f0c) 100; */
+}
+
+.main_home_wrap {
+
+    margin-bottom: 40px;
+}
+
+.Main_Tagline {
+    width: 650px;
+    font-weight: 100;
+    font-size: 72px;
+    color: hsl(219, 100%, 66%);
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.noresult {
+    font-size: 16px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin: auto;
+}
+
+/* Book List */
+.grid_booklist {
+
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+
+.book_item_wrap {
+    margin: auto;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+}
+
+.coverimg {
+    display: flex;
+    justify-content: center;
+}
+
+.cardimg {
+    border-radius: 10px;
+    width: 230px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    object-fit: cover;
+}
+
+.Book_card_data {
+    margin: 15px 0;
+}
+
+.Book_card_data h3 {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+}
+
+.author {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #3d3d3d;
+    margin: 0;
+
+}
+
+.genres {
+    font-size: 10px;
+    margin: 0;
+    color: rgb(175, 148, 0);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+}
+
+.suggestion_wrap {
+    z-index: 1;
+    position: absolute;
+    background-color: #889eff;
+    width: 400px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.suggestion_wrap ul {
+
+    margin: 0;
+    padding: 0;
+}
+
+.tool_suggestion_list {
+    color: white;
+    padding: 5px 10px;
+    list-style: none;
+}
+
+.tool_suggestion_list:hover {
+    color: rgb(52, 52, 52);
+    list-style: none;
+    background-color: white;
+}
+
+@media screen and (max-width:786px) {
+    .hero_section_wrap {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .Main_Tagline {
+        margin: auto;
+        /* width: 650px; */
+        width: 100%;
+        font-weight: 100;
+        font-size: 30px;
+        color: hsl(219, 100%, 66%);
+        font-family: 'Luckiest Guy', cursive;
+        text-align: center;
+
+    }
+
+    .grid_booklist {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .book_item_wrap {
+        width: 150px;
+    }
+
+    .cardimg {
+        width: 150px;
+    }
+
+    .searchBar {
+        width: 325px;
+    }
+
+    .bookreadimg {
+        width: 315px;
+    }
+
+    .Book_card_data h3 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .search_wrap {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .suggestion_wrap {
+        z-index: 1;
+        position: relative;
+        background-color: #889eff;
+        width: 300px;
+        border-radius: 3px;
+        padding: 10px;
+
+    }
+}
+
+@media (min-width:786px) and (max-width:1100px) {
+    .hero_section_wrap {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .Main_Tagline {
+        margin: auto;
+        /* width: 650px; */
+        width: 100%;
+        font-weight: 100;
+        font-size: 30px;
+        color: hsl(219, 100%, 66%);
+        font-family: 'Luckiest Guy', cursive;
+        text-align: center;
+
+    }
+
+    .grid_booklist {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .book_item_wrap {
+        width: 150px;
+    }
+
+    .cardimg {
+        width: 150px;
+    }
+
+    .searchBar {
+        width: 325px;
+    }
+
+    .bookreadimg {
+        width: 315px;
+    }
+
+    .Book_card_data h3 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .search_wrap {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .suggestion_wrap {
+        z-index: 1;
+        position: relative;
+        background-color: #889eff;
+        width: 300px;
+        border-radius: 3px;
+        padding: 10px;
+
+    }
+}
+
+@media (min-width:577px) and (max-width:992px) {
+    .grid_booklist {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .searchBar {
+        width: 256px;
+    }
+}

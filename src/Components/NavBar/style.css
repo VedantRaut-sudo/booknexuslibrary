@@ -1,0 +1,136 @@
+
+.nomoredata {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}  
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+     font-family: 'Poppins', sans-serif;
+    position: sticky;
+    top: 0;
+    padding: 0 20px;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: #ffffff9d;
+
+    border-bottom: 1px solid #e2e2e2;
+}
+nav{
+     font-family: 'Poppins', sans-serif;
+    padding: 10px 15px ;
+    
+    border-bottom: 1px solid rgba(2, 23, 53, .1);
+    transition: border-color .2s;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.logo {
+    background: linear-gradient(120deg, #fec938, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Pacifico', cursive;
+    font-weight: 200;
+    font-size: 30px;
+margin: 0;
+
+}
+.right{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.right li {
+    text-decoration: none;
+    list-style: none;
+
+}
+.right ul {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.btn_for_nav{
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+    padding: 7px 14px ;
+}
+
+.authuserphoto{
+
+    width: 50px;
+    border-radius: 50%
+}
+
+.right_for_mobile{
+    display: none;
+}
+.right_for_mobile h2{
+font-size: 16px;
+font-weight: 400;
+}
+.login_mobile_link{
+    color: black;
+    text-decoration: none;
+    display: flex;
+
+}
+.unknownuser{
+    margin-left: 30px;
+    width: 40px;
+    border-radius: 50px;
+}
+.link_for_list{
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+.right li{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+.icon{
+    margin-left: 10px;
+    width: 35px;
+    border-radius: 50px;
+}
+@media screen and (max-width:576px) {
+    .unknownuser{
+        
+        width: 30px;
+        border-radius: 50px
+    }
+    nav{
+        padding: 0;
+    }
+    .right{
+        display: none;
+        
+    }
+    .logo{
+        padding: 10px 0;
+        font-size: 22px;
+    }
+    .right_for_mobile{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}

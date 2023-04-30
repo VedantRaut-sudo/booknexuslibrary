@@ -1,0 +1,123 @@
+
+.Footer {
+    /* height: 300px; */
+    background-color: #ececec;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .upperfooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  .section h3 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .section {
+    border: 1px solid #d3d3d3;
+    padding: 30px 70px;
+  }
+  
+  .section li {
+    margin: 15px 5px;
+  }
+  
+  .lowerfooter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .socialmedia {
+    display: flex;
+    flex-direction: row;
+  
+  }
+  
+  .socialimg {
+    margin: 10px 20px;
+    width: 30px;
+  }
+  
+  .HEader_For_male {}
+  
+  .upper {
+    margin: auto;
+    max-width: 1380px;
+  
+  }
+  
+  .Roundborder {
+    border-radius: 50px;
+  }
+  
+  .upper h1 {
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    font-weight: 400;
+  
+  
+  }
+  .centerfooter h3{
+    margin: auto;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width:576px){
+    .upperfooter {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .sloganforshoe {
+      width: 100px;
+      font-size: 72px;
+    }
+  
+    .tagline_summer {
+      position: relative;
+      bottom: 0;
+      width: 50%;
+      height: 22%;
+      bottom: -500px;
+      /* left: 50px; */
+    }
+  
+    .feature_data {
+      width: 66%;
+  
+    }
+  
+    .rightfooter {
+      display: none;
+    }
+  
+    .Feature_cloth {
+      height: 1150px;
+    }
+    .socialimg {
+      margin: 0 10px;
+      /* width: 30px; */
+    }
+    .centerfooter h3{
+  
+      font-size: 11px;
+      margin: 11px;
+      text-align: end;
+    }
+  }
+
+  @media (min-width:576px) and (max-width:1122px){
+    .upperfooter {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+ 
+  }

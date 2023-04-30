@@ -1,0 +1,285 @@
+.dashboard_wrap {
+    background-color: rgb(244, 244, 244);
+
+    margin: auto;
+}
+
+.dashpanelimg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.dashboard_sidebar {
+    border-right: 2px solid rgb(161, 161, 161);
+    position: sticky;
+    top: 55px;
+    height: 100vh;
+
+
+}
+
+.dashboardheading {
+    font-size: 32px;
+    margin: 20px 0;
+    font-weight: 600;
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dash_panel {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.dash_card_for_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.card_info {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    padding: 20px;
+    border-radius: 13px;
+    height: 150px;
+
+}
+
+.dashbookimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard_bookList {}
+
+.list_of_books_dash {}
+
+.up {
+    display: flex;
+    flex-direction: row;
+}
+
+.bookitem_dash {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    /* border:2px solid #d8d8d8; */
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+    margin: 10px 0;
+    list-style: none;
+    background-color: white;
+}
+
+.listimg_dash {
+    width: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 90px;
+}
+
+.data_book_list {
+    padding: 8px 20px;
+    align-items: center;
+    /* text-align: center; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dashbookcardheading {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.dashbookcardauthor {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+
+}
+
+.btn_delete_item {}
+
+.btn_edit_item {}
+
+.btn_for_update {
+    outline: none;
+    border: none;
+    width: 100px;
+    padding: 7px 15px;
+    margin: 0 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.inputs_data_book {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    padding:50px 30px ;
+    max-width: 700px;
+    margin: auto;
+    margin: 40px auto;
+    flex-direction:column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.headingcenter{
+    margin: 10px auto;
+}
+.newbtn{}
+.imgupload{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.iteminput{
+margin:10px;
+}
+.upsave{
+    margin: 20px 0;
+    border-radius: 3px;
+font-size: 22px;
+padding: 9px 12px ;
+background-color: rgb(81, 81, 81);
+color: white;
+border: none;
+/* margin: auto; */
+}
+.save{
+    
+    border-radius: 3px;
+    padding: 7px 12px ;
+    /* margin: 20px 0; */
+    font-size: 22px;
+    background-color: rgb(0, 158, 0);
+    color: white;
+    border: none;
+    /* margin: auto; */
+}
+.upperfour{
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+}
+.iteminput input{
+    padding: 7px 12px;
+    width: 250px;
+    /* margin: 20px; */
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(210, 210, 210);
+    color: rgb(36, 36, 36);
+}
+.dash_card_data_title{
+    font-size: 32px;
+    width: 200px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.dash_card_data_result{font-size: 67px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+
+.card_info{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.down{
+    background-color: rgb(255, 255, 147);
+
+
+}
+
+        .modal-content{
+            width: 70%;
+            margin: auto;
+        }
+        .modal-content input{
+            padding: 7px 12px;
+            width: 250px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            
+            color: rgb(36, 36, 36);
+        }
+        .btns{
+            margin: 10px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+@media screen and (max-width:578px){
+    /* .dash_card_data_title {
+        font-size: 16px;
+        /* width: 200px; 
+        color: white;
+        font-family: 'Poppins', sans-serif;} */
+        .dash_card_for_info{
+            grid-template-columns: 1fr;
+        }
+        .upperfour{
+            grid-template-columns: 1fr;
+        }
+
+        .inputs_data_book{
+            padding: 17px 5px
+        }
+        .up{
+            flex-direction: column;
+        }
+        .data_book_list{
+            flex-direction: column;
+        }
+        .modify_btn{
+            margin: 10px;
+            display: flex;
+        }
+        .dashbookcardheading{
+            font-size: 20px;
+        }
+        .left_side_list{
+            text-align: center;
+        }
+        .modal-content input{
+            padding: 7px 12px;
+            width: 250px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            background-color: rgb(210, 210, 210);
+            color: rgb(36, 36, 36);
+        }
+        .btns{
+            margin: 10px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .down{
+            background-color: rgb(255, 255, 147);
+            padding: 0px;
+        
+        }
+}

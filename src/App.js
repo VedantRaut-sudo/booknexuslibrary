@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar isAuth={isAuth} />
+        <NavBar isAuth={isAuth} setIsAuth={setIsAuth} />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route

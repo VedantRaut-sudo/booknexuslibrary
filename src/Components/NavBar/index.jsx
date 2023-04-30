@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 import './style.css'
 import { auth } from '../../config/firebase';
 import unknownuser from '../../Assets/account.png'
-const index = ({ isAuth }) => {
+import { signOut } from 'firebase/auth';
+const index = ({ isAuth,setIsAuth }) => {
+  const signout =()=>{
+    signOut(auth).then(()=>{
+      console.log("user sign out")
+      setIsAuth(false)
+    })
+  }
   return (
     <div className='navbar'>
 
@@ -15,7 +22,9 @@ const index = ({ isAuth }) => {
           </Link>
         </div>
         <div className="right">
-          {isAuth ? (<img className='authuserphoto' src={auth.currentUser.photoURL} alt="" />) : <ul>
+          {isAuth ? (
+            
+            <img onClick={signout} className='authuserphoto' src={auth.currentUser.photoURL} alt="" />) : <ul>
 
             <li>
 

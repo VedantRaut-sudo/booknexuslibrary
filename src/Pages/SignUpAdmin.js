@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth} from "../config/firebase";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import adinlogin from "../Assets/pexels-pixabay-159740.jpg";
+import adinlogin from "../Assets/pexels-berti-weber-2404185.jpg";
 const SignUpAdmin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

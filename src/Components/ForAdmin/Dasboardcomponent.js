@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import { auth, db, storage } from "../../config/firebase";
-import coverimgdash from "../../Assets/pexels-neosiam-4498792.jpg";
+import coverimgdash from "../../Assets/pexels-berti-weber-2404185.jpg";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { uploadBytes, ref, getDownloadURL } from "firebase/storage";
 import DashboardBoolList from "./DashboardBoolList";

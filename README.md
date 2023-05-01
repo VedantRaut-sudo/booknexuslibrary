@@ -1,5 +1,21 @@
-# Getting Started with Create React App
 
+# Welcome to BookNexus Codebase
+BookNexus is a modern and intuitive website designed to make reading and managing books effortless. The website provides a seamless experience for users to browse and discover books. The website is built using cutting-edge technologies and frameworks, making it both responsive and fast.
+
+The website is built using React, a frontend library known for its flexibility and performance. and the database using Firebase, which provides real-time synchronization and secure data storage. This allows for a fast and reliable experience, even with a high volume of users and books.
+
+BookNexus is a fully responsive website that works seamlessly on all devices, including laptops, tablets, and mobile phones. The website is designed to be highly optimized and compatible with all modern web browsers, providing users with a consistent and reliable experience across all platforms.
+
+
+# Note that to access the admin section use Login credential as follow's
+- Email: admin@gmail.com
+- Password: admin123
+
+now you can easily add new book as admin.
+
+
+
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

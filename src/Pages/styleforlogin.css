@@ -216,9 +216,14 @@ label{
   .loginwrap{
     padding: 15px;
   }
+
   .adminloginglass {
 
     width: 100%
+  }
+  .mainlogintag{
+    color: white;
+    -webkit-text-stroke: 1px #000000;
   }
 }
 @media screen and (max-width:576px) {

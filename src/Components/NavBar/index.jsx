@@ -11,6 +11,7 @@ const index = ({ isAuth, setIsAuth, adminAuth, setAdminAuth }) => {
       setIsAuth(false)
       setAdminAuth(false)
     })
+    
   }
   return (
     <div className='navbar'>

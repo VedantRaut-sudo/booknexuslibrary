@@ -4,11 +4,12 @@ import './style.css'
 import { auth } from '../../config/firebase';
 import unknownuser from '../../Assets/account.png'
 import { signOut } from 'firebase/auth';
-const index = ({ isAuth,setIsAuth }) => {
+const index = ({ isAuth,setIsAuth,adminAuth,setAdminAuth }) => {
   const signout =()=>{
     signOut(auth).then(()=>{
       console.log("user sign out")
       setIsAuth(false)
+      setAdminAuth(false)
     })
   }
   return (
@@ -22,9 +23,13 @@ const index = ({ isAuth,setIsAuth }) => {
           </Link>
         </div>
         <div className="right">
-          {isAuth ? (
+          {isAuth||adminAuth ? (
+           <div>
             
-            <img onClick={signout} className='authuserphoto' src={auth.currentUser.photoURL} alt="" />) : <ul>
+              <img onClick={signout} className='authuserphoto' src={auth.currentUser.photoURL} alt="" /> 
+         
+            </div> 
+            )  : <ul>
 
             <li>
 

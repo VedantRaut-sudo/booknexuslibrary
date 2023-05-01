@@ -11,20 +11,17 @@ const index = ({ isAuth, setIsAuth, adminAuth, setAdminAuth }) => {
       setIsAuth(false)
       setAdminAuth(false)
     })
-    
   }
   return (
     <div className='navbar'>
-
-
-      <nav>
+  <nav>
         <div className="left">
           <Link className='link' to={'/'}>
             <h1 className='logo'>BookNexus</h1>
           </Link>
         </div>
         <div className="right">
-          {isAuth || adminAuth ? (
+          {isAuth? (
             <div className='centerdiv'>
 
               <Link className='btn_for_nav' to={'/dashboard'}>

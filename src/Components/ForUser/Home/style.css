@@ -178,7 +178,9 @@ color: black;
         flex-direction: column;
         justify-content: space-around;
     }
-   
+   .grid_booklist{
+    grid-gap: 0;
+   }
     
     .Main_Tagline {
         -webkit-text-stroke: 1px #000000;
@@ -188,7 +190,7 @@ color: black;
         font-weight: 100;
         font-size: 38px;
         padding: 13px;
-        padding-top: 20px;
+        padding-top: 50px;
         color: hsl(219, 100%, 66%);
         font-family: 'Luckiest Guy', cursive;
         text-align: center;

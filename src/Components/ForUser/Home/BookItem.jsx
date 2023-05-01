@@ -18,7 +18,7 @@ const BookItem = ({ item }) => {
     return (
         <div onClick={handleClickOnBook} className='book_item_wrap'>
             <div className="coverimg">
-                <img className='cardimg' src={item.imageUrl} alt="cover-img" />
+                <img className='cardimg' loading='_prority' src={item.imageUrl} alt="cover-img" />
             </div>
             <div className="Book_card_data">
                 <h3>{item.title}</h3>

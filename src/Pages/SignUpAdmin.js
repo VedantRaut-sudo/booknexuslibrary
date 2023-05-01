@@ -2,7 +2,7 @@ import React from "react";
 import "./styleforlogin.css";
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, googleprovider } from "../config/firebase";
+import { auth} from "../config/firebase";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import adinlogin from "../Assets/pexels-pixabay-159740.jpg";
@@ -40,7 +40,7 @@ const SignUpAdmin = () => {
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
-                placeholder="email"
+                placeholder="Enter Email"
               />
             </div>
             <div className="label_signup">
@@ -50,7 +50,9 @@ const SignUpAdmin = () => {
                 onChange={(e) => {
                   setPassword(e.target.value);
                 }}
-                placeholder="password"
+                id="password"
+                name="password"
+                placeholder="Enter Password"
               />
             </div>
             <div className="label_signup">
@@ -60,7 +62,7 @@ const SignUpAdmin = () => {
                 onChange={(e) => {
                   setSecurityKey(e.target.value);
                 }}
-                placeholder="password"
+                placeholder="Enter Security Key"
               />
             </div>
             <button className="loginbtn" onClick={SignUp}>Sign In</button>

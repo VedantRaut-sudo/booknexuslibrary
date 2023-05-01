@@ -2,6 +2,7 @@ import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../../config/firebase";
 import './style.css'
+import arrow from '../../../Assets/right-arrow.png'
 
 // import No_Result from './no-results.png'
 import { Link } from 'react-router-dom'
@@ -11,12 +12,17 @@ const SearchBar = () => {
     const [booksList, setBookList] = useState([]);
     const referenceAddress = collection(db, "books");
     const fetchdata = async () => {
-        const books = await getDocs(referenceAddress);
-        const sortedData = books.docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-        }));
-        setBookList(sortedData);
+        try{
+
+            const books = await getDocs(referenceAddress);
+            const sortedData = books.docs.map((doc) => ({
+                ...doc.data(),
+                id: doc.id,
+            }));
+            setBookList(sortedData);
+        }catch(err){
+            console.error(err)
+        }
     };
     useEffect(() => {
         fetchdata();
@@ -57,6 +63,7 @@ const SearchBar = () => {
                 <ul>
                     {titleSuggestion.slice(0, 5).map((item) => (
                         <li className='tool_suggestion_list' key={item.title}>
+                            <img className="arrow" src={arrow} alt="" />
                   <SearchItem item={item}/>
 
                         </li>

@@ -95,6 +95,7 @@
 .dashbookcardheading {
     margin-bottom: 10px;
     font-size: 24px;
+    max-width: 244px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }

@@ -8,12 +8,17 @@ const BookList = () => {
     const [booksList, setBookList] = useState([]);
     const referenceAddress = collection(db, "books");
     const fetchdata = async () => {
-        const books = await getDocs(referenceAddress);
-        const sortedData = books.docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-        }));
-        setBookList(sortedData);
+        try{
+
+            const books = await getDocs(referenceAddress);
+            const sortedData = books.docs.map((doc) => ({
+                ...doc.data(),
+                id: doc.id,
+            }));
+            setBookList(sortedData);
+        }catch(err){
+            console.error(err)
+        }
     };
     useEffect(() => {
         fetchdata();
@@ -24,7 +29,7 @@ const BookList = () => {
             {
                 BookList ? booksList.map((item) => (
 
-                    <div>
+                    <div key={item.id}>
                         <BookItem item={item} />
                     </div>
                 )) : <div>

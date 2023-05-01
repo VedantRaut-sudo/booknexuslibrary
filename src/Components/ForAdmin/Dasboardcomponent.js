@@ -2,15 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import { auth, db, storage } from "../../config/firebase";
 import coverimgdash from "../../Assets/pexels-neosiam-4498792.jpg";
-import {
-  Auth,
-  collection,
-  getDocs,
-  doc,
-  addDoc,
-  deleteDoc,
-  updateDoc,
-} from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import { uploadBytes, ref, getDownloadURL } from "firebase/storage";
 import DashboardBoolList from "./DashboardBoolList";
 
@@ -23,33 +15,41 @@ const Dasboardcomponent = () => {
   const [content, SetContent] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [fileUpload, setFileUpload] = useState(null);
-  const [avialabe, setAvialable] = useState(false);
+  // const [avialabe, setAvialable] = useState(false);
   const [numberofitem, setNumberOfItem] = useState(0);
 
   const onSubmit = async () => {
-    await addDoc(refer, {
-      title: title,
-      author: author,
-      genres: genres,
-      content: content,
-      userId: auth?.currentUser?.uid,
-      imageUrl: imageUrl,
-      avialabe: avialabe,
-      person: auth.currentUser.displayName,
-    }).then(() => {
-      fetchdata();
-    });
+    try {
+      await addDoc(refer, {
+        title: title,
+        author: author,
+        genres: genres,
+        content: content,
+        userId: auth?.currentUser?.uid,
+        imageUrl: imageUrl,
+
+        person: auth.currentUser.displayName,
+      }).then(() => {
+        fetchdata();
+      });
+    } catch (err) {
+      console.error(err);
+    }
   };
   const referenceAddress = collection(db, "books");
   const fetchdata = async () => {
-    const books = await getDocs(referenceAddress);
-    const number_of_item = books.size;
-    console.log(number_of_item);
-    const sortedData = books.docs.map((doc) => ({
-      ...doc.data(),
-      id: doc.id,
-    }));
-    setNumberOfItem(number_of_item);
+    try{
+
+      const books = await getDocs(referenceAddress);
+      const number_of_item = books.size;
+      const sortedData = books.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setNumberOfItem(number_of_item);
+    }catch(err){
+      console.error(err)
+    }
   };
 
   useEffect(() => {
@@ -92,7 +92,7 @@ const Dasboardcomponent = () => {
               onClick={handle_open_add_new_section}
               className="card_info"
               style={{
-                backgroundImage: "linear-gradient(135deg, #ff49bc, #f0c82b)"
+                backgroundImage: "linear-gradient(135deg, #ff49bc, #f0c82b)",
               }}
             >
               <h3 className="dash_card_data_title">Add Books</h3>

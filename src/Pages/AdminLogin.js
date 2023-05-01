@@ -3,11 +3,10 @@ import "./styleforlogin.css";
 import { useState } from "react";
 import adinlogin from "../Assets/pexels-karolina-grabowska-4218706.jpg";
 import {
-  createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut,
+  
 } from "firebase/auth";
-import { auth, googleprovider } from "../config/firebase";
+import { auth } from "../config/firebase";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const AdminLogin = ({ setAdminAuth }) => {
@@ -15,7 +14,7 @@ const AdminLogin = ({ setAdminAuth }) => {
   const [password, setPassword] = useState("");
   const NAVIGATE = useNavigate();
 
-  console.log(email, password);
+  
   const login = async () => {
     if (email === "admin@gmail.com") {
       await signInWithEmailAndPassword(auth, email, password).then(() => {
@@ -27,7 +26,7 @@ const AdminLogin = ({ setAdminAuth }) => {
       alert("you are not a valid user");
       console.log("you are not valid user");
     }
-    console.log(auth.currentUser.email);
+
   };
   return (
     <div>
@@ -41,23 +40,23 @@ const AdminLogin = ({ setAdminAuth }) => {
               <h1 className="mainlogintag">Admin Sign In</h1>
 
               <div className="label">
-                <label htmlFor="email">Enter Email</label>
+                <label htmlFor="email">Email</label>
                 <input
                   type="text"
                   onChange={(e) => {
                     setEmail(e.target.value);
                   }}
-                  placeholder="email"
+                  placeholder="Enter Email"
                 />
               </div>
               <div className="label">
-                <label htmlFor="pass">Enter Password</label>
+                <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   onChange={(e) => {
                     setPassword(e.target.value);
                   }}
-                  placeholder="password"
+                  placeholder="Enter Password"
                 />
               </div>
               <button className="loginbtn" onClick={login}>Sign In</button>

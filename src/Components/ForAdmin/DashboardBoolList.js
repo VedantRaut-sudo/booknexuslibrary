@@ -17,19 +17,24 @@ const DashboardBoolList = () => {
   const [newcontent, SetNewContent] = useState("");
   const [newimageUrl, setNewImageUrl] = useState("");
   const [newfileUpload, setNewFileUpload] = useState(null);
-  const [newavialabe, setNewAvialable] = useState(false);
+  // const [newavialabe, setNewAvialable] = useState(false);
 
   const [booksList, setBookList] = useState([]);
   const [selectedBook, setSelectedBook] = useState(null);
   const referenceAddress = collection(db, "books");
 
   const fetchdata = async () => {
-    const books = await getDocs(referenceAddress);
-    const sortedData = books.docs.map((doc) => ({
-      ...doc.data(),
-      id: doc.id,
-    }));
-    setBookList(sortedData);
+    try{
+
+      const books = await getDocs(referenceAddress);
+      const sortedData = books.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setBookList(sortedData);
+    }catch(err){
+      console.error(err)
+    }
   };
 
   useEffect(() => {
@@ -51,21 +56,26 @@ const DashboardBoolList = () => {
   };
 
   const updateitembtn = async (id) => {
-    console.log(id);
-    fetchdata();
+    
     const items = doc(db, "books", id);
-    await updateDoc(items, {
-      title: newtitle,
-      author: newauthor,
-      genres: newgenres,
-      content: newcontent,
-      userId: auth?.currentUser?.uid,
-      imageUrl: newimageUrl,
-      avialabe: newavialabe,
-      person: auth.currentUser.displayName,
-    });
-    setSelectedBook(null);
-  };
+    try{
+
+      await updateDoc(items, {
+        title: newtitle,
+        author: newauthor,
+        genres: newgenres,
+        content: newcontent,
+        userId: auth?.currentUser?.uid,
+        imageUrl: newimageUrl,
+      
+        person: auth.currentUser.displayName,
+      });
+      fetchdata();
+      setSelectedBook(null);
+    }catch(err){
+      console.error(err)
+    }
+    };
   const uploadfile = async () => {
     if (!newfileUpload) return;
     const fileFolderref = ref(storage, `toolimg/${newfileUpload.name}`);

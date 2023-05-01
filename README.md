@@ -13,6 +13,15 @@ BookNexus is a fully responsive website that works seamlessly on all devices, in
 
 now you can easily add new book as admin.
 
+# Technology Used
+- React
+- Firebase 
+- JavaScript
+- CSS
+- Vercel
+
+# Open Website 
+- https://booknexuslibrary.vercel.app
 
 
 # Getting Started with Create React App

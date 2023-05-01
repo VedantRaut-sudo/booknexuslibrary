@@ -5,6 +5,7 @@ import coverimgdash from "../../Assets/pexels-berti-weber-2404185.jpg";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { uploadBytes, ref, getDownloadURL } from "firebase/storage";
 import DashboardBoolList from "./DashboardBoolList";
+import { useNavigate } from "react-router-dom";
 
 const Dasboardcomponent = () => {
   const [addNewBookSection, setAddNewBookSection] = useState(false);
@@ -18,6 +19,7 @@ const Dasboardcomponent = () => {
   // const [avialabe, setAvialable] = useState(false);
   const [numberofitem, setNumberOfItem] = useState(0);
 
+  const NAVIGATE=useNavigate();
   const onSubmit = async () => {
     try {
       await addDoc(refer, {
@@ -30,6 +32,7 @@ const Dasboardcomponent = () => {
 
         person: auth.currentUser.displayName,
       }).then(() => {
+NAVIGATE('/')
         fetchdata();
       });
     } catch (err) {

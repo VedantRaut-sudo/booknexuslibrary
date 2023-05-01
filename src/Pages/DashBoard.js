@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
 import Dasboardcomponent from '../Components/ForAdmin/Dasboardcomponent'
-import DashboardBoolList from '../Components/ForAdmin/DashboardBoolList'
+// import DashboardBoolList from '../Components/ForAdmin/DashboardBoolList'
 import { useNavigate } from "react-router-dom";
 
 const DashBoard = ({adminAuth}) => {

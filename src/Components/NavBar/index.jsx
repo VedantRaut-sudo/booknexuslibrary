@@ -4,9 +4,9 @@ import './style.css'
 import { auth } from '../../config/firebase';
 import unknownuser from '../../Assets/account.png'
 import { signOut } from 'firebase/auth';
-const index = ({ isAuth,setIsAuth,adminAuth,setAdminAuth }) => {
-  const signout =()=>{
-    signOut(auth).then(()=>{
+const index = ({ isAuth, setIsAuth, adminAuth, setAdminAuth }) => {
+  const signout = () => {
+    signOut(auth).then(() => {
       console.log("user sign out")
       setIsAuth(false)
       setAdminAuth(false)
@@ -23,23 +23,25 @@ const index = ({ isAuth,setIsAuth,adminAuth,setAdminAuth }) => {
           </Link>
         </div>
         <div className="right">
-          {isAuth||adminAuth ? (
-           <div>
-            
-              <img onClick={signout} className='authuserphoto' src={auth.currentUser.photoURL} alt="" /> 
-         
-            </div> 
-            )  : <ul>
+          {isAuth || adminAuth ? (
+            <div className='centerdiv'>
+
+              <Link className='btn_for_nav' to={'/dashboard'}>
+                Admin
+              </Link>
+              <img onClick={signout} className='authuserphoto' src={auth.currentUser.photoURL} alt="" />
+            </div>
+          ) : <ul>
 
             <li>
 
               <Link className='btn_for_nav' to={'/dashboard'}>
                 Admin
-                </Link>
+              </Link>
             </li>
             <li>
-              <Link className='link_for_list'  to={'/login'}>
-                <img  className='unknownuser' src={unknownuser} alt="" />
+              <Link className='link_for_list' to={'/login'}>
+                <img className='unknownuser' src={unknownuser} alt="" />
               </Link>
 
             </li>
